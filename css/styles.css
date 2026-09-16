@@ -331,6 +331,14 @@ h1.title {
   background-image: radial-gradient(120% 100% at 50% 30%, oklch(0.40 0.10 50) 0%, oklch(0.19 0.04 42) 55%, oklch(0.11 0.02 30) 100%);
 }
 
+.video-wrap-embed {
+  border-radius: 24px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
 .video-wrap iframe {
   position: absolute;
   inset: 0;

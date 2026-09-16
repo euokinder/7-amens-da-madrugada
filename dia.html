@@ -6,7 +6,7 @@
 <title>7 Améns da Madrugada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=2">
+<link rel="stylesheet" href="css/styles.css?v=3">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon-32.png">
 <link rel="apple-touch-icon" href="assets/images/icon-180.png">
 </head>
@@ -27,7 +27,7 @@
 
 </div>
 
-<script src="js/dias.js?v=5"></script>
+<script src="js/dias.js?v=6"></script>
 <script src="js/materiais.js?v=3"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
@@ -48,10 +48,16 @@
     const playIcon = '<svg width="26" height="26" viewBox="0 0 24 24" fill="var(--dark-on-accent)"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>';
 
     let videoHtml = '';
+    let videoScriptSrc = '';
     if (temVideo) {
-      videoHtml = dia.videoId
-        ? `<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${dia.videoId}" title="${dia.titulo}" allowfullscreen></iframe></div>`
-        : `<div class="video-wrap"><div class="play-btn">${playIcon}</div></div>`;
+      if (dia.videoEmbed) {
+        videoHtml = `<div class="video-wrap-embed">${dia.videoEmbed.html}</div>`;
+        videoScriptSrc = dia.videoEmbed.scriptSrc;
+      } else if (dia.videoId) {
+        videoHtml = `<div class="video-wrap"><iframe src="https://www.youtube.com/embed/${dia.videoId}" title="${dia.titulo}" allowfullscreen></iframe></div>`;
+      } else {
+        videoHtml = `<div class="video-wrap"><div class="play-btn">${playIcon}</div></div>`;
+      }
     }
 
     const materialHtml = dia.materialPdf
@@ -120,6 +126,13 @@
         <span>Faça as orações na ordem e nos horários corretos</span>
       </div>
     `;
+
+    if (videoScriptSrc) {
+      const playerScript = document.createElement('script');
+      playerScript.src = videoScriptSrc;
+      playerScript.async = true;
+      document.head.appendChild(playerScript);
+    }
   }
 </script>
 <script src="js/app.js?v=3"></script>
