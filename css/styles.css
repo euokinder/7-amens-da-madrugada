@@ -332,6 +332,7 @@ h1.title {
 }
 
 .video-wrap-embed {
+  position: relative;
   border-radius: 24px;
   overflow: hidden;
   clip-path: inset(0 round 24px);
@@ -339,6 +340,42 @@ h1.title {
   flex: 0 0 auto;
   display: flex;
   justify-content: center;
+}
+
+/* O player externo às vezes desenha os controles numa camada que ignora
+   o recorte acima (comum em players com vídeo acelerado por hardware).
+   Como reforço, pintamos por cima 4 cantos curvos da cor do fundo do
+   app, disfarçando qualquer canto quadrado que escape do recorte. */
+.video-wrap-embed .corner-mask {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.video-wrap-embed .corner-mask.tl {
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 24px 24px, transparent 24px, var(--bg) 24.5px);
+}
+
+.video-wrap-embed .corner-mask.tr {
+  top: 0;
+  right: 0;
+  background: radial-gradient(circle at 0 24px, transparent 24px, var(--bg) 24.5px);
+}
+
+.video-wrap-embed .corner-mask.bl {
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at 24px 0, transparent 24px, var(--bg) 24.5px);
+}
+
+.video-wrap-embed .corner-mask.br {
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(circle at 0 0, transparent 24px, var(--bg) 24.5px);
 }
 
 .video-wrap iframe {
