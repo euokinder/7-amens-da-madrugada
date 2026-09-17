@@ -18,6 +18,68 @@ const DIAS = {
     audioUrl: '',
     disponivel: true,
     oracao: null,
+    guiaPage: {
+      destaque: 'Você não precisa decorar nada.',
+      destaqueTexto: 'Guarde este guia. Amanhã, entre 4h e 7h, comece pelo Primeiro Amém e siga um dia de cada vez.',
+      fraseKicker: 'Sua jornada em uma frase',
+      frase: '7 madrugadas. 7 orações. Uma oração por dia.',
+      fraseTexto: 'Sem pressa. Sem compensar. Sem precisar recomeçar do zero se perder um dia.',
+      amanha: {
+        titulo: 'Amanhã é o Dia 1',
+        subtitulo: 'Pai Nosso Completo',
+        texto: 'O Padre Tiago estará com você em cada madrugada.'
+      },
+      prepare: [
+        { titulo: 'Horário', texto: 'O recomendado é rezar entre 4h e 7h da manhã.' },
+        { titulo: 'Em voz alta', texto: 'De preferência acompanhando o áudio guiado.' },
+        { titulo: 'Sem interrupções', texto: 'Escolha um lugar tranquilo e deixe o celular no silencioso.' },
+        { titulo: 'Duração', texto: 'Reserve cerca de 8 a 10 minutos para cada oração.' }
+      ],
+      checklist: [
+        'Deixar o áudio fácil de encontrar',
+        'Separar um lugar tranquilo',
+        'Colocar o celular no silencioso',
+        'Lembrar: amanhã é apenas uma oração'
+      ],
+      seNaoForPossivel: 'Reze assim que acordar. A constância é mais importante do que fazer tudo perfeito.',
+      regras: [
+        { titulo: 'Uma oração por dia', texto: 'Não reze duas no mesmo dia para compensar.' },
+        { titulo: 'Siga a sequência', texto: 'Faça do 1º ao 7º Amém, sempre nessa ordem.' },
+        { titulo: 'Não pule de propósito', texto: 'Cada dia prepara o seguinte.' },
+        { titulo: 'Perdeu uma madrugada?', texto: 'Continue no dia seguinte de onde parou.' },
+        { titulo: 'Não recomece do zero', texto: 'Uma falha não apaga o caminho já feito.' },
+        { titulo: 'Reze em voz alta', texto: 'De preferência junto do áudio guiado.' },
+        { titulo: 'Faça sem pressa', texto: 'Reserve o tempo da oração e dos momentos de silêncio.' }
+      ],
+      regraPrincipal: 'Um dia de cada vez.',
+      jornada: [
+        { titulo: 'Pai Nosso Completo', texto: 'Abra a jornada e reze devagar, prestando atenção em cada palavra.', frase: 'Hoje, eu abri o caminho.' },
+        { titulo: 'Oração do Perdão', texto: 'Solte mágoas e culpas antigas, dos outros e de si mesma.', frase: 'Hoje, eu solto o peso que carreguei por anos.' },
+        { titulo: 'Oração da Cura', texto: 'Apresente a Deus a sua saúde ou a de alguém que você ama.', frase: 'Eu não estou enfrentando isso sozinha.' },
+        { titulo: 'Oração da Libertação', texto: 'Marque uma decisão de ruptura com aquilo que te prende.', frase: 'Isso pode terminar em mim.' },
+        { titulo: 'Oração da Prosperidade', texto: 'Apresente seu trabalho e suas contas, pedindo clareza e disciplina.', frase: 'Pode existir uma saída que eu ainda não estou enxergando.' },
+        { titulo: 'Oração da Paz', texto: 'Menos palavras. Mais silêncio e descanso.', frase: 'Hoje, eu consigo descansar.' },
+        { titulo: 'Oração da Aliança', texto: 'Não é um pedido novo: é a entrega e o selo da semana inteira.', frase: 'Eu fiz a minha parte. Agora eu entrego.' }
+      ],
+      duvidas: [
+        { p: 'Perdi um dia. E agora?', r: 'Continue no dia seguinte a partir de onde parou. Não faça duas orações no mesmo dia.' },
+        { p: 'Preciso ter muita fé para começar?', r: 'Não. O guia orienta atenção e constância, um dia de cada vez.' },
+        { p: 'Posso rezar fora de 4h às 7h?', r: 'Esse é o horário recomendado. Se não for possível, reze assim que acordar.' },
+        { p: 'Só ouvir o áudio já basta?', r: 'A orientação é falar em voz alta, de preferência acompanhando o áudio guiado.' },
+        { p: 'E depois do 7º dia?', r: 'Você pode usar o Pai Nosso Completo avulso ou, depois de algum tempo, reiniciar a jornada.' }
+      ],
+      saude: 'As orações caminham ao lado de tratamento médico, terapia ou remédios - nunca no lugar deles.',
+      planoTitulo: 'Está Tudo Pronto',
+      planoSubtitulo: 'Amanhã, comece.',
+      planoTexto: 'Sem tentar fazer a semana inteira hoje.',
+      plano: [
+        { titulo: 'Ao acordar', texto: 'Vá para o lugar tranquilo que você escolheu.' },
+        { titulo: 'Abra o Dia 1', texto: 'Comece pelo Pai Nosso Completo.' },
+        { titulo: 'Reze em voz alta', texto: 'Acompanhe o áudio guiado, sem pressa.' },
+        { titulo: 'Terminou?', texto: 'Feche o dia. A próxima oração fica para amanhã.' }
+      ],
+      lembrete: 'Você não precisa fazer tudo perfeito. Precisa apenas continuar.'
+    },
     proximo: 'Amanhã: Primeira Madrugada — O Pai Nosso Completo.'
   },
   1: {
