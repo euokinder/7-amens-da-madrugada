@@ -42,7 +42,7 @@ function initConfirmModal() {
 
   noBtn.addEventListener('click', () => {
     scrim.classList.remove('open');
-    window.location.href = 'dia.html?dia=0';
+    window.location.href = scrim.dataset.noHref || 'dia.html?dia=0';
   });
 
   // Se a página for restaurada do cache do navegador (ex: ao clicar "Voltar"),

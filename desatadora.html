@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>7 Orações Sagradas</title>
+<title>Novena a Nossa Senhora Desatadora dos Nós</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css?v=11">
@@ -26,45 +26,17 @@
     <div class="section-heading">
       <div class="bar"></div>
       <div class="heading-block">
-        <h1 class="title" style="font-size:24px;">7 Orações Sagradas</h1>
-        <p class="subtext">Toque em um dia para abrir a oração completa.</p>
+        <h1 class="title" style="font-size:24px;">Novena Desatadora dos Nós</h1>
+        <p class="subtext">Um nó desfeito a cada dia, com Nossa Senhora. Toque um dia pra assistir.</p>
       </div>
     </div>
 
     <div id="dias-list" style="display:flex;flex-direction:column;gap:20px;"></div>
 
-    <h2 class="section-label">Material Complementar</h2>
-
-    <a href="dia.html?material=guia-rapido" class="card static" style="height:280px;background-image:linear-gradient(to top, oklch(0.06 0.01 40 / 0.35) 0%, transparent 45%), url(assets/images/dia-0-introducao.jpg);">
-      <div class="icon-badge">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
-      </div>
-      <div class="play-btn">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--dark-on-accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Guia Rápido</h3>
-        <p class="card-sub">As regras da jornada, antes de começar</p>
-      </div>
-    </a>
-
-    <a href="dia.html?material=pai-nosso" class="card static" style="height:280px;background-image:linear-gradient(to top, oklch(0.06 0.01 40 / 0.35) 0%, transparent 45%), url(assets/images/dia-1-pai-nosso.jpg);">
-      <div class="icon-badge">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="4" x2="12" y2="20"/><line x1="6" y1="9" x2="18" y2="9"/></svg>
-      </div>
-      <div class="play-btn">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="var(--dark-on-accent)"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Pai Nosso Avulso</h3>
-        <p class="card-sub">A oração completa, pra acessar quando quiser</p>
-      </div>
-    </a>
-
   </div>
 </div>
 
-<div class="modal-scrim" id="confirm-modal">
+<div class="modal-scrim" id="confirm-modal" data-no-href="desatadora.html">
   <div class="modal-card">
     <div class="modal-icon">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.2 2.2L15.5 9.5"/></svg>
@@ -75,35 +47,36 @@
     <div class="modal-checklist">
       <div class="item">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.2 2.2L15.5 9.5"/></svg>
-        <p>Você já assistiu o vídeo anterior?</p>
+        <p>Você já assistiu ao vídeo do dia anterior?</p>
       </div>
       <div class="item">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.2 2.2L15.5 9.5"/></svg>
-        <p>Está fazendo na hora correta?</p>
+        <p>Está rezando um dia por vez, sem pular?</p>
       </div>
       <div class="item">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.2 2.2L15.5 9.5"/></svg>
-        <p>Está respeitando todas as instruções?</p>
+        <p>Está em um momento tranquilo pra rezar?</p>
       </div>
     </div>
     <div class="modal-actions">
-      <button class="modal-btn primary" id="confirm-yes" type="button">SIM, ESTÁ TUDO CERTO!</button>
-      <button class="modal-btn secondary" id="confirm-no" type="button">NÃO, ESTOU CONFUSA DE COMO FAZER</button>
+      <button class="modal-btn primary" id="confirm-yes" type="button">SIM, ESTÁ TUDO PRONTO!</button>
+      <button class="modal-btn secondary" id="confirm-no" type="button">NÃO, NÃO SEI AINDA</button>
     </div>
   </div>
 </div>
 
-<script src="js/dias.js?v=17"></script>
+<script src="js/novena-desatadora.js"></script>
 <script>
-  const FOTOS = [
-    'assets/images/dia-0-introducao.jpg',
-    'assets/images/dia-1-pai-nosso.jpg',
-    'assets/images/dia-2-perdao.jpg',
-    'assets/images/dia-3-cura.jpg',
-    'assets/images/dia-4-libertacao.jpg',
-    'assets/images/dia-5-prosperidade.jpg',
-    'assets/images/dia-6-paz.jpg',
-    'assets/images/dia-7-alianca.jpg'
+  const ARTES_DESATADORA = [
+    'assets/images/desatadora/dia-1.svg',
+    'assets/images/desatadora/dia-2.svg',
+    'assets/images/desatadora/dia-3.svg',
+    'assets/images/desatadora/dia-4.svg',
+    'assets/images/desatadora/dia-5.svg',
+    'assets/images/desatadora/dia-6.svg',
+    'assets/images/desatadora/dia-7.svg',
+    'assets/images/desatadora/dia-8.svg',
+    'assets/images/desatadora/dia-9.svg'
   ];
   const OVERLAY = "linear-gradient(to top, oklch(0.06 0.01 40 / 0.35) 0%, transparent 45%)";
 
@@ -113,20 +86,20 @@
   const list = document.getElementById('dias-list');
   let html = '';
 
-  for (let i = 0; i <= 7; i++) {
-    const dia = DIAS[i];
-    const foto = FOTOS[i];
+  for (let i = 1; i <= 9; i++) {
+    const dia = NOVENA_DESATADORA[i];
+    const arte = ARTES_DESATADORA[i - 1];
     const locked = !dia.disponivel;
-    const href = locked ? '#' : (i === 0 ? 'dia.html?dia=0' : `dia.html?dia=${i}`);
+    const href = locked ? '#' : `dia-desatadora.html?dia=${i}`;
     const needsConfirm = !locked && dia.confirmaAntes;
     const tag = locked ? 'div' : 'a';
     const hrefAttr = locked ? '' : `href="${href}"`;
     const confirmAttr = needsConfirm ? 'data-confirm="true"' : '';
 
     html += `
-      <${tag} ${hrefAttr} ${confirmAttr} class="card${locked ? ' locked' : ''}" style="height:320px;background-image:${OVERLAY}, url(${foto});">
+      <${tag} ${hrefAttr} ${confirmAttr} class="card${locked ? ' locked' : ''}" style="height:280px;background-image:${OVERLAY}, url(${arte});">
         <div class="num-badge">${dia.numero}</div>
-        ${locked ? '<div class="pill-badge">Indisponível</div>' : ''}
+        ${locked ? '<div class="pill-badge">Em breve</div>' : ''}
         <div class="play-btn">${locked ? lockIcon : playIcon}</div>
         <div class="card-body">
           <h3 class="card-title">${dia.titulo}</h3>

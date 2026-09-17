@@ -133,6 +133,10 @@ const DIAS = {
     subtitulo: 'Oração do Perdão',
     kicker: '7 Améns da Madrugada · Dia 02',
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aac286cd1cf3533caea5880" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aac286cd1cf3533caea5880/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/dia-02-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
     materialPage: {
@@ -171,6 +175,10 @@ const DIAS = {
     subtitulo: 'Oração da Cura',
     kicker: '7 Améns da Madrugada · Dia 03',
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aac288759845bfd5b371b1e" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aac288759845bfd5b371b1e/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/dia-03-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
     materialPage: {
@@ -210,6 +218,10 @@ const DIAS = {
     subtitulo: 'Oração da Libertação',
     kicker: '7 Améns da Madrugada · Dia 04',
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aac359e57fe5864f0f72204" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aac359e57fe5864f0f72204/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/dia-04-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
     materialPage: {
@@ -248,6 +260,10 @@ const DIAS = {
     subtitulo: 'Oração da Prosperidade',
     kicker: '7 Améns da Madrugada · Dia 05',
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aac291793f4b40dc401d0da" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aac291793f4b40dc401d0da/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/dia-05-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
     materialPage: {
@@ -287,6 +303,10 @@ const DIAS = {
     subtitulo: 'Oração da Paz',
     kicker: '7 Améns da Madrugada · Dia 06',
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aac35bfeb06d96c9272123e" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aac35bfeb06d96c9272123e/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/dia-06-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
     materialPage: {
