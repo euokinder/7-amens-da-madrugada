@@ -342,6 +342,10 @@ const DIAS = {
     subtitulo: 'Oração da Aliança',
     kicker: '7 Améns da Madrugada · Dia 07',
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aac39e6eb06d96c92721e01" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aac39e6eb06d96c92721e01/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/dia-07-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
     materialPage: {
