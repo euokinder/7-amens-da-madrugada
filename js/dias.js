@@ -32,7 +32,7 @@ const DIAS = {
     },
     materialPdf: 'assets/pdfs/dia-01-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
-    audioUrl: '',
+    audioUrl: 'assets/audio/dia-01-oracao.mp3',
     materialExtraPdf: 'assets/pdfs/traducao-lado-a-lado.pdf',
     materialExtraLabel: 'Manuscrito Digital em Aramaico',
     disponivel: true,

@@ -22,7 +22,7 @@ const MATERIAIS = {
     },
     materialPdf: 'assets/pdfs/pai-nosso-completo-premium.pdf',
     materialLabel: 'Acessar Material de Apoio',
-    audioUrl: '',
+    audioUrl: 'assets/audio/dia-01-oracao.mp3',
     materialExtraPdf: 'assets/pdfs/traducao-lado-a-lado.pdf',
     materialExtraLabel: 'Manuscrito Digital em Aramaico',
     oracao: {
