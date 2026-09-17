@@ -6,7 +6,7 @@
 <title>7 Améns da Madrugada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=8">
+<link rel="stylesheet" href="css/styles.css?v=11">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon-32.png">
 <link rel="apple-touch-icon" href="assets/images/icon-180.png">
 </head>
@@ -27,7 +27,64 @@
 
 </div>
 
-<script src="js/dias.js?v=7"></script>
+<div class="modal-scrim sheet" id="material-modal">
+  <div class="material-sheet">
+    <div class="material-sheet-header">
+      <button class="back-btn" type="button" id="material-close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        <span>Fechar</span>
+      </button>
+    </div>
+    <div class="material-sheet-body" id="material-sheet-body">
+      <span class="kicker" id="material-kicker"></span>
+      <div class="heading-block">
+        <h1 class="title" style="font-size:22px;" id="material-title"></h1>
+        <p class="subtext" id="material-subtitle"></p>
+      </div>
+
+      <button class="material-btn lg" type="button" id="material-pdf-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0 4-4m-4 4-4-4"/><path d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"/></svg>
+        Baixar PDF pra guardar ou imprimir
+      </button>
+
+      <div>
+        <h2 class="section-label" style="margin-bottom:14px;">Como Rezar Este Amém</h2>
+        <div class="modal-checklist" id="material-regras"></div>
+        <p class="subtext" id="material-importante" style="margin-top:14px;font-size:13px;line-height:1.6;display:none;"></p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <h2 class="section-label" style="margin:0;">Antes de Começar</h2>
+        <p class="subtext" style="font-size:15px;color:var(--ink);" id="material-antes"></p>
+        <div id="material-preencher-wrap" style="display:flex;flex-direction:column;gap:8px;">
+          <label class="kicker" id="material-preencher-label" style="text-transform:none;letter-spacing:0;"></label>
+          <input type="text" id="material-preencher-input" class="material-input" placeholder="Escreva aqui, se quiser guardar...">
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <h2 class="section-label" style="margin:0;">A Oração</h2>
+        <div class="prayer-card" id="material-oracao"></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <h2 class="section-label" style="margin:0;">Depois de Rezar</h2>
+        <p class="subtext" style="font-size:15px;color:var(--ink);" id="material-depois"></p>
+      </div>
+
+      <div class="declaration-card">
+        <span class="kicker" style="color:var(--card-muted);">Declaração do Dia</span>
+        <p id="material-declaracao"></p>
+      </div>
+
+      <div class="banner">
+        <span>Não pule dias. Não inverta a ordem. Não reze mais de uma oração por dia.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/dias.js?v=14"></script>
 <script src="js/materiais.js?v=4"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
@@ -60,8 +117,12 @@
       }
     }
 
+    const materialClick = dia.materialPage
+      ? `onclick="abrirMaterialPage()"`
+      : `onclick="window.open('${dia.materialPdf}', '_blank')"`;
+
     const materialHtml = dia.materialPdf
-      ? `<button class="material-btn" type="button" onclick="window.open('${dia.materialPdf}', '_blank')">
+      ? `<button class="material-btn" type="button" ${materialClick}>
            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2.5H7a1.5 1.5 0 0 0-1.5 1.5v16A1.5 1.5 0 0 0 7 21.5h10a1.5 1.5 0 0 0 1.5-1.5V7Z"/><path d="M14.5 2.5V7H19"/><line x1="8.5" y1="12.5" x2="15.5" y2="12.5"/><line x1="8.5" y1="16" x2="15.5" y2="16"/></svg>
            ${dia.materialLabel}
          </button>`
@@ -232,6 +293,63 @@
         if (isDragging) seekFromEvent(e);
       });
       track.addEventListener('pointerup', () => { isDragging = false; });
+    }
+
+    if (dia.materialPage) {
+      const mp = dia.materialPage;
+      document.getElementById('material-kicker').textContent = dia.kicker;
+      document.getElementById('material-title').textContent = dia.titulo;
+      document.getElementById('material-subtitle').textContent = dia.subtitulo;
+      document.getElementById('material-pdf-btn').onclick = () => window.open(dia.materialPdf, '_blank');
+      document.getElementById('material-regras').innerHTML = mp.regras.map((r) => `
+        <div class="item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.2 2.2L15.5 9.5"/></svg>
+          <p>${r}</p>
+        </div>
+      `).join('');
+      const importanteEl = document.getElementById('material-importante');
+      if (mp.importante) {
+        importanteEl.innerHTML = `<i>Importante:</i> ${mp.importante}`;
+        importanteEl.style.display = 'block';
+      } else {
+        importanteEl.style.display = 'none';
+      }
+      document.getElementById('material-antes').textContent = mp.antes;
+      if (dia.oracao) {
+        const blocos = dia.oracao.blocos.map((b) => `<p>${b.replace(/\n/g, '<br>')}</p>`).join('');
+        document.getElementById('material-oracao').innerHTML = `
+          <p class="opening">${dia.oracao.abertura}</p>
+          ${blocos}
+          <p class="closing">${dia.oracao.fechamento}</p>
+        `;
+      }
+      document.getElementById('material-depois').textContent = mp.depois;
+      document.getElementById('material-declaracao').textContent = `“${mp.declaracao}”`;
+
+      const preencherWrap = document.getElementById('material-preencher-wrap');
+      const preencherInput = document.getElementById('material-preencher-input');
+      if (mp.preencher) {
+        document.getElementById('material-preencher-label').textContent = mp.preencher;
+        const storageKey = `pedido-dia-${dia.numero}`;
+        try {
+          const saved = localStorage.getItem(storageKey);
+          if (saved) preencherInput.value = saved;
+        } catch (e) {}
+        preencherInput.addEventListener('input', () => {
+          try { localStorage.setItem(storageKey, preencherInput.value); } catch (e) {}
+        });
+      } else {
+        preencherWrap.style.display = 'none';
+      }
+
+      window.abrirMaterialPage = () => {
+        document.getElementById('material-modal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      };
+      document.getElementById('material-close').addEventListener('click', () => {
+        document.getElementById('material-modal').classList.remove('open');
+        document.body.style.overflow = '';
+      });
     }
   }
 </script>

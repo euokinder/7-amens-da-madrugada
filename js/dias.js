@@ -32,6 +32,18 @@ const DIAS = {
     },
     materialPdf: 'assets/pdfs/dia-01-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    materialPage: {
+      regras: [
+        'Horário: entre 4h e 7h da manhã.',
+        'Duração: cerca de 8 a 10 minutos, sem pressa.',
+        'Reze em voz alta, de preferência acompanhando o áudio guiado.',
+        'Escolha um lugar tranquilo, sozinho, sem interrupções.'
+      ],
+      antes: 'Respire fundo três vezes. Guarde em silêncio o pedido mais importante do seu coração para estes sete dias.',
+      preencher: 'Meu pedido:',
+      depois: 'Fique alguns instantes em silêncio e apresente a Deus o seu pedido. Diga o nome, a situação, o que está doendo — sem pressa para terminar.',
+      declaracao: 'Hoje, eu abri o caminho.'
+    },
     audioUrl: 'assets/audio/dia-01-oracao.mp3',
     materialExtraPdf: 'assets/pdfs/traducao-lado-a-lado.pdf',
     materialExtraLabel: 'Manuscrito Digital em Aramaico',
@@ -61,6 +73,18 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-02-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    materialPage: {
+      regras: [
+        'Horário: entre 4h e 7h da manhã.',
+        'Duração: cerca de 9 a 11 minutos, sem pressa.',
+        'Reze em voz alta, de preferência acompanhando o áudio guiado.',
+        'Escolha um lugar tranquilo, sozinho, sem interrupções.'
+      ],
+      antes: 'Perdoar não é dizer que o que aconteceu estava certo, e não significa voltar a conviver com quem te machucou. É libertar o seu próprio coração.',
+      preencher: 'Eu preciso perdoar:',
+      depois: 'Fique alguns instantes em silêncio. Se ainda houver um nome guardado no coração, apresente-o a Deus — em voz alta ou em silêncio.',
+      declaracao: 'Hoje, eu solto o peso que carreguei por anos.'
+    },
     audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
@@ -87,6 +111,19 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-03-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    materialPage: {
+      regras: [
+        'Horário: entre 4h e 7h da manhã.',
+        'Duração: cerca de 8 a 10 minutos, sem pressa.',
+        'Reze em voz alta, de preferência acompanhando o áudio guiado.',
+        'Escolha um lugar tranquilo, sozinho, sem interrupções.'
+      ],
+      importante: 'esta oração não substitui médico, remédio ou tratamento nenhum. Continue o seu acompanhamento médico normalmente — a fé e o cuidado com a saúde caminham juntos.',
+      antes: 'Decida por quem você vai rezar hoje: por você, ou por alguém que você ama.',
+      preencher: 'Eu rezo por:',
+      depois: 'Fique alguns instantes em silêncio. Diga a Deus, em voz alta ou em silêncio, o nome de quem você está entregando hoje, e o que dói.',
+      declaracao: 'Eu não estou enfrentando isso sozinho, sozinha.'
+    },
     audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
@@ -113,6 +150,19 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-04-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    materialPage: {
+      regras: [
+        'Horário: entre 4h e 7h da manhã.',
+        'Duração: cerca de 8 a 10 minutos, sem pressa.',
+        'Reze em voz alta, de preferência acompanhando o áudio guiado.',
+        'Escolha um lugar tranquilo, sozinho, sem interrupções.'
+      ],
+      importante: 'se o que te prende é uma dependência química ou uma compulsão que já machucou a sua vida, esta oração caminha ao lado de tratamento, terapia ou grupo de apoio — ela não substitui isso.',
+      antes: 'Nomeie, dentro de você, o que te prende hoje.',
+      preencher: 'Eu rompo hoje com:',
+      depois: 'Diga a Deus, em voz alta ou em silêncio, o nome daquilo que você está rompendo hoje. Se for um padrão de família, peça que essa corrente pare aqui, com você.',
+      declaracao: 'Isso pode terminar em mim.'
+    },
     audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
@@ -138,6 +188,19 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-05-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    materialPage: {
+      regras: [
+        'Horário: entre 4h e 7h da manhã.',
+        'Duração: cerca de 8 a 10 minutos, sem pressa.',
+        'Reze em voz alta, de preferência acompanhando o áudio guiado.',
+        'Escolha um lugar tranquilo, sozinho, sem interrupções.'
+      ],
+      importante: 'esta oração não promete dinheiro garantido, herança ou prêmio. Ela pede clareza, disciplina e coragem para enxergar e agir sobre oportunidades.',
+      antes: 'Pense na sua situação financeira específica.',
+      preencher: 'Eu apresento a Deus:',
+      depois: 'Diga a Deus, em voz alta ou em silêncio, qual é a sua situação financeira específica. Peça clareza pra ela, com as suas próprias palavras.',
+      declaracao: 'Pode existir uma saída que eu ainda não estou enxergando.'
+    },
     audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
@@ -164,6 +227,19 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-06-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    materialPage: {
+      regras: [
+        'Horário: entre 4h e 7h da manhã.',
+        'Duração: cerca de 8 a 10 minutos — boa parte em silêncio.',
+        'Este é o dia mais calmo dos sete. Sem pressa nenhuma.',
+        'Escolha um lugar tranquilo, sozinho, sem interrupções.'
+      ],
+      importante: 'se você faz tratamento para ansiedade, insônia ou depressão, continue fazendo. Esta oração é descanso — não substitui o seu tratamento.',
+      antes: 'Feche os olhos, se puder. Respire fundo, sem pressa, três vezes. Você não precisa resolver nada agora — só descansar.',
+      preencher: null,
+      depois: 'Fique mais um instante em silêncio, só respirando. Se um pensamento insistir em voltar, deixe ele passar — não lute com ele.',
+      declaracao: 'Hoje, eu consigo descansar.'
+    },
     audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
@@ -186,6 +262,18 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-07-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    materialPage: {
+      regras: [
+        'Horário: entre 4h e 7h da manhã.',
+        'Duração: cerca de 9 a 11 minutos, sem pressa.',
+        'Hoje você não pede nada novo — você entrega e sela a semana.',
+        'Escolha um lugar tranquilo, sozinho, sem interrupções.'
+      ],
+      antes: 'Pense em cada pessoa que mora com você, ou que você quer proteger com essa bênção. Respire fundo três vezes.',
+      preencher: null,
+      depois: 'Diga, em voz alta ou em silêncio, o nome de cada pessoa que você quer cobrir com essa bênção.',
+      declaracao: 'Eu fiz a minha parte. Agora eu entrego.'
+    },
     audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
