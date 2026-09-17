@@ -27,8 +27,8 @@
 
 </div>
 
-<script src="js/dias.js?v=6"></script>
-<script src="js/materiais.js?v=3"></script>
+<script src="js/dias.js?v=7"></script>
+<script src="js/materiais.js?v=4"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
   const materialKey = params.get('material');
@@ -78,6 +78,13 @@
       ? `<p style="margin:0;font-size:15px;font-weight:500;line-height:1.7;color:var(--ink);">${dia.descricao}</p>`
       : '';
 
+    const audioHtml = dia.audioUrl
+      ? `<button class="material-btn audio-btn" type="button" id="audio-btn">
+           <svg id="audio-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg>
+           <span id="audio-label">Ouvir a Oração em Áudio</span>
+         </button>`
+      : '';
+
     let oracaoHtml = '';
     if (dia.oracao) {
       const blocos = dia.oracao.blocos
@@ -113,6 +120,8 @@
 
       ${descricaoHtml}
 
+      ${audioHtml}
+
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         ${materialHtml}
         ${materialExtraHtml}
@@ -132,6 +141,32 @@
       playerScript.src = videoScriptSrc;
       playerScript.async = true;
       document.head.appendChild(playerScript);
+    }
+
+    if (dia.audioUrl) {
+      const audioBtn = document.getElementById('audio-btn');
+      const audioIcon = document.getElementById('audio-icon');
+      const audioLabel = document.getElementById('audio-label');
+      const audio = new Audio(dia.audioUrl);
+      const playIconPath = '<path d="M8 5.5v13l11-6.5-11-6.5Z"/>';
+      const pauseIconPath = '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>';
+
+      audioBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play();
+          audioIcon.innerHTML = pauseIconPath;
+          audioLabel.textContent = 'Pausar Áudio';
+        } else {
+          audio.pause();
+          audioIcon.innerHTML = playIconPath;
+          audioLabel.textContent = 'Ouvir a Oração em Áudio';
+        }
+      });
+
+      audio.addEventListener('ended', () => {
+        audioIcon.innerHTML = playIconPath;
+        audioLabel.textContent = 'Ouvir a Oração em Áudio';
+      });
     }
   }
 </script>

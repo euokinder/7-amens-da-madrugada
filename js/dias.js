@@ -1,6 +1,7 @@
 // Conteúdo real dos 7 Améns da Madrugada + Introdução.
 // videoId vazio = ainda não temos o vídeo real (mostra placeholder).
 // materialPdf vazio = ainda não temos o PDF desse dia (botão fica oculto).
+// audioUrl vazio = sem áudio ainda (botão de ouvir fica oculto).
 const DIAS = {
   0: {
     numero: '0',
@@ -14,6 +15,7 @@ const DIAS = {
     },
     materialPdf: 'assets/pdfs/7-amens-comece-aqui-premium-revisado.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     disponivel: true,
     oracao: null,
     proximo: 'Amanhã: Primeira Madrugada — O Pai Nosso Completo.'
@@ -24,8 +26,13 @@ const DIAS = {
     subtitulo: 'Pai Nosso Completo',
     kicker: '7 Améns da Madrugada · Dia 01',
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aab6a53529335352865b504" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aab6a53529335352865b504/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/dia-01-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     materialExtraPdf: 'assets/pdfs/traducao-lado-a-lado.pdf',
     materialExtraLabel: 'Manuscrito Digital em Aramaico',
     disponivel: true,
@@ -54,6 +61,7 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-02-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
     oracao: {
@@ -79,6 +87,7 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-03-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
     oracao: {
@@ -104,6 +113,7 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-04-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
     oracao: {
@@ -128,6 +138,7 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-05-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
     oracao: {
@@ -153,6 +164,7 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-06-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
     oracao: {
@@ -174,6 +186,7 @@ const DIAS = {
     videoId: '',
     materialPdf: 'assets/pdfs/dia-07-material-apoio.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     disponivel: true,
     confirmaAntes: true,
     oracao: {

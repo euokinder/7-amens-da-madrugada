@@ -16,8 +16,13 @@ const MATERIAIS = {
     subtitulo: 'A oração completa, pra acessar quando quiser',
     temVideo: true,
     videoId: '',
+    videoEmbed: {
+      html: '<vturb-smartplayer id="vid-6aab6a53529335352865b504" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>',
+      scriptSrc: 'https://scripts.converteai.net/3fe9f7a6-c604-479d-b1c4-ccd47fcf7108/players/6aab6a53529335352865b504/v4/player.js'
+    },
     materialPdf: 'assets/pdfs/pai-nosso-completo-premium.pdf',
     materialLabel: 'Acessar Material de Apoio',
+    audioUrl: '',
     materialExtraPdf: 'assets/pdfs/traducao-lado-a-lado.pdf',
     materialExtraLabel: 'Manuscrito Digital em Aramaico',
     oracao: {
